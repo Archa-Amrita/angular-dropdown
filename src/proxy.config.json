@@ -1,0 +1,7 @@
+{
+    "/api/*": {
+        "target": "https://rb-mobileweb.de.bosch.com/2021/spm/php_v3.0",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}
