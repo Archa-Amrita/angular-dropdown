@@ -1,0 +1,11 @@
+{
+    "query": "query",
+    "results": [
+      {"name": "Bosch Rexroth", "type": "suggest"},
+      {"name": "Industrial Hydraulics", "type": "suggest"},
+      {"name": "Sensors and Signal transmitters", "type": "suggest"},
+      {"name": "Proportional Serve valves", "type": "suggest"},
+      {"name": "Test Systems", "type": "suggest"}
+    ]
+  }
+  

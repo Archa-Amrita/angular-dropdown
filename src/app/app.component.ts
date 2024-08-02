@@ -17,7 +17,10 @@ export class AppComponent implements OnInit {
     $('.component-progress').componentProgressbar('setProgress', this.num);
     $('.module-header').moduleHeader();
     $('.module-header-navigation').moduleHeaderNavigation();
-
+    $('.header-extensions .module-header-search').moduleHeaderSearch();
+    $('.module-header-meta-navigation').moduleHeaderMetaNavigation();
+    $('.module-tab-navigation').moduleTabNavigation();
+    $('.module-dropdown-input-ready').moduleDropdownInputReady();
   }
 
   addTen(){

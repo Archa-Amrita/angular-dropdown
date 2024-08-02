@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6">
+      <!-- JUST FOR DEMO -->
+      <h4 class="mb-0 h5">VALUE OF INPUT</h4>
+      <p id="demo1_value"></p>
+      <hr>
+      <div class="module-dropdown-input-ready" data-plugin="moduleDropdownInputReady">
+        <div class="module-input form-group floating-label" data-plugin="moduleInput">
+          <label for="demo1">Please Select....</label>
+          <div class="input-animation-wrapper">
+            <select class="form-control" id="groupIdSelect" (change)="onSelectedOptionChange($event)">
+              <option value="" disabled [selected]="!selectedValue">Select an option</option>
+              <option *ngFor="let item of options" [value]="item.group1_id">
+                {{ item.group1_id }}
+              </option>
+            </select>
+            <!--data-search-url="url" is needed to use the AutoComplete function.-->
+            <div class="input-animation"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

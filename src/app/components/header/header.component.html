@@ -1,0 +1,513 @@
+<header class="module-header " data-plugin="moduleHeader" data-event-bubbling-intercept="header.outsideClick">
+    <div class="fixed-container">
+        <div class="header-top">
+            <div class="module-button">
+                <button type="button" class="btn btn-navigation" aria-label="Button Aria Label Text"></button>
+                <div class="button-content">
+                    <span class="upper-line"></span>
+                    <span class="middle-line"></span>
+                    <span class="bottom-line"></span>
+                </div>
+            </div>
+            <div class="header-logo">
+                <a class="logo" href="./index.html">
+                    <!-- Image Template -->
+                    <!-- indent-description is an optional Parameter for Large Images. The Description will be restricted to 10 Columns and centered under the Image -->
+                    <!-- Important: Fallback Image inside srcset-Attribut needs to have the same aspect ratio as the Images in src and data-srcset -->
+                    <div class="module-image ">
+                        <img class="lazyload" src="../../../assets/images/rexroth_logo_animated_113.gif" alt="logo"
+                            srcset="../../../assets/images/rexroth_logo_animated_113.gif" data-sizes="auto"
+                            data-srcset="../../../assets/images/rexroth_logo_animated_113.gif 768w, ../../../assets/images/rexroth_logo_animated_113.gif 920w " />
+                    </div>
+                </a>
+            </div>
+            <span class="toggle-meta-nav"></span>
+            <!-- @TODO The module-meta-navigation must not stand without it's wrapping container. -->
+            <div class="meta-nav">
+                <ul>
+                    <li> </li>
+                    <li>
+                        <a href="#" class=" " role="link">
+                            <i class="icon icon-dc_mail"></i> Contact
+                        </a>
+                    </li>
+                    <li>
+                        <!-- @TODO Warning: Duplicated code due to missing modular setup of the meta navigation. -->
+                        <a href="/" class=" login" role="link">
+                            <i class="icon icon-dc_user"></i> myRexroth
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon-wrapper basket-wrapper no-items">
+                                <i class="icon icon-dc_cart">
+                                    <i class="bubble-wrapper">
+                                        <i class="notification-bubble"></i>
+                                    </i>
+                                </i>
+                            </span> Basket
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- @TODO The module-search must not stand without it's wrapping container. -->
+           <!--  <div class="module-header-search" data-plugin="moduleHeaderSearch">
+                <span class="toggle-header-search"></span>
+                <form action="/best-practice-search.html" method="GET" class="header-search" name="header-search">
+                    <button type="submit" class="header-submit">Search</button>
+                    <input type="search" class="search-field" name="q" placeholder="Search here"
+                        [(ngModel)]="searchTerm" (input)="onInputChange($event)">
+                    <div class="autocomplete-container" *ngIf="suggestions.length > 0">
+                        <div class="autocomplete-suggestion" *ngFor="let suggestion of suggestions"
+                            (click)="selectSuggestion(suggestion.name)">
+                            {{ suggestion.name }}
+                        </div>
+                    </div>
+                    <div class="module-button search-close">
+                        <button type="button" class="btn" aria-label="Button Aria Label Text"
+                            aria-hidden="true"></button>
+                        <div class="button-content">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </form>
+            </div> -->
+
+        </div>
+        <div class="header-extensions">
+            <!-- @TODO The module wrapper must be part of the module template. -->
+            <div class="module-header-search" data-plugin="moduleHeaderSearch">
+                <span class="toggle-header-search"></span>
+                <form action="/best-practice-search.html" method="GET" class="header-search" name="header-search">
+                    <button type="submit" class="header-submit">Search</button>
+                    <input type="search" class="search-field" name="q" placeholder="Search here" rv-value="q"
+                        data-search-url="data/search-result.json?q={queue}&amount=5">
+                    <input type="hidden" name="num" value="10">
+                    <input type="hidden" name="lang" value="de">
+                    <div class="module-button search-close">
+                        <button type="button" class="btn" aria-label="Button Aria Label Text"
+                            aria-hidden="true"></button>
+                        <div class="button-content">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="module-header-meta-navigation" data-plugin="moduleHeaderMetaNavigation">
+                <div class="meta-nav">
+                    <ul>
+                        <li>
+                            <a href="#" class=" " role="link">
+                                <i class="icon icon-dc_mail"></i> Contact
+                            </a>
+                        </li>
+                        <li>
+                            <!-- @TODO Warning: Duplicated code due to missing modular setup of the meta navigation. -->
+                            <a href="/" class=" login" role="link">
+                                <i class="icon icon-dc_user"></i> myRexroth
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="icon-wrapper basket-wrapper no-items">
+                                    <i class="icon icon-dc_cart">
+                                        <i class="bubble-wrapper">
+                                            <i class="notification-bubble"></i>
+                                        </i>
+                                    </i>
+                                </span> Basket
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="module-header-navigation" data-top-level-id="nav-block-1" data-plugin="moduleHeaderNavigation">
+                <div class="container-fluid">
+                    <div class="header-navigation-wrapper">
+                        <div class="header-navigation-breadcrumbs"></div>
+                        <div class="header-navigation-block top-level" id="nav-block-1" data-level="1">
+                            <template class="header-navigation-breadcrumbs-template">
+                                <!-- Note that these are no real breadcrumbs (no urls) and hence do not need schema.org markup. -->
+                                <ul class="list list-horizontal">
+                                    <li>
+                                        <a href="#" class="action-header-navigate disabled"
+                                            data-target-id="nav-block-1"> Menu <i
+                                                class="icon icon-dc_forward_right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </template>
+                            <div class="header-navigation-content">
+                                <div class="row">
+                                    <div class="col-lg-9">
+                                        <ul class="list list-content"
+                                            itemtype="http://www.schema.org/SiteNavigationElement">
+                                            <li class="content-item" itemprop="name">
+                                                <a href="#" class="secondary action-header-navigate"
+                                                    data-target-id="nav-block-2-1" itemprop="url"> Products </a>
+                                            </li>
+                                            <li class="content-item" itemprop="name">
+                                                <a href="#" class="secondary action-header-navigate"
+                                                    data-target-id="nav-block-2-2" itemprop="url"> [Service] </a>
+                                            </li>
+                                            <li class="content-item" itemprop="name">
+                                                <a href="#" class="secondary action-header-navigate"
+                                                    data-target-id="nav-block-2-3" itemprop="url"> [Skyrocket] </a>
+                                            </li>
+                                            <li class="content-item" itemprop="name">
+                                                <a href="#" class="secondary action-header-navigate"
+                                                    data-target-id="nav-block-2-4" itemprop="url"> [Sensational] </a>
+                                            </li>
+                                            <li class="content-item" itemprop="name">
+                                                <a href="/" class="secondary action-header-navigate" itemprop="url">
+                                                    Trustworthy </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <!-- This block is optional. -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-navigation-block" id="nav-block-2-1" data-level="2">
+                            <template class="header-navigation-breadcrumbs-template">
+                                <!-- Note that these are no real breadcrumbs (no urls) and hence do not need schema.org markup. -->
+                                <ul class="list list-horizontal">
+                                    <li>
+                                        <a href="#" class="action-header-navigate" data-target-id="nav-block-1"> Menu <i
+                                                class="icon icon-dc_forward_right"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="action-header-navigate disabled"
+                                            data-target-id="nav-block-2-1"> Products <i
+                                                class="icon icon-dc_forward_right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </template>
+                            <div class="header-navigation-title">
+                                <p> <strong> Products </strong> </p>
+                                <a href="https://www.google.de/" class="overview secondary">
+                                    <i class="icon icon-dc_overview"></i> overview
+                                </a>
+                            </div>
+                            <div class="header-navigation-content">
+                                <div class="row">
+                                    <div class="col-lg-9">
+                                        <ul class="list list-content"
+                                            itemtype="http://www.schema.org/SiteNavigationElement">
+                                            <li class="content-item" itemprop="name">
+                                                <a href="#" class="secondary action-header-navigate"
+                                                    data-target-id="nav-block-3-1" itemprop="url"> Industrial Hydraulics
+                                                </a>
+                                            </li>
+                                            <li class="content-item" itemprop="name">
+                                                <a href="#" class="secondary action-header-navigate"
+                                                    data-target-id="nav-block-3-2" itemprop="url"> [Most Important, but
+                                                    Behind the Scenes] </a>
+                                            </li>
+                                            <li class="content-item" itemprop="name">
+                                                <a href="#" class="secondary action-header-navigate"
+                                                    data-target-id="nav-block-3-3" itemprop="url"> [Missing Out] </a>
+                                            </li>
+                                            <li class="content-item" itemprop="name">
+                                                <a href="#" class="secondary action-header-navigate"
+                                                    data-target-id="nav-block-3-4" itemprop="url"> [Superior] </a>
+                                            </li>
+                                            <li class="content-item" itemprop="name">
+                                                <a href="#" class="secondary action-header-navigate"
+                                                    data-target-id="nav-block-3-5" itemprop="url"> [Urge] </a>
+                                            </li>
+                                            <li class="content-item" itemprop="name">
+                                                <a href="#" class="secondary action-header-navigate"
+                                                    data-target-id="nav-block-3-6" itemprop="url"> [Instant Savings]
+                                                </a>
+                                            </li>
+                                            <li class="content-item" itemprop="name">
+                                                <a href="#" class="secondary action-header-navigate"
+                                                    data-target-id="nav-block-3-7" itemprop="url"> [What no one tells
+                                                    you] </a>
+                                            </li>
+                                            <li class="content-item" itemprop="name">
+                                                <a href="/" class="secondary action-header-navigate" itemprop="url">
+                                                    Magnificent </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <!-- This block is optional. -->
+                                        <div class="contact" itemtype="http://schema.org/Person">
+                                            <!--<meta itemprop="gender" content="http://schema.org/Female">-->
+                                            <meta itemprop="gender" content="http://schema.org/Male">
+                                            <meta itemprop="image"
+                                                content="https://intpic01.internom.net/custom/persons/02/240x240/">
+                                            <!-- Consider that obfuscation/removal will protect this data but render it useless. -->
+                                            <meta itemprop="email" content="maximilian.mueller-markgrafs@bosch.de">
+                                            <meta itemprop="telephone" content="499352181234567">
+                                            <div class="contact-title">
+                                                <p> <strong> Your contact person: </strong> </p>
+                                            </div>
+                                            <div class="contact-content">
+                                                <div class="content-image">
+                                                    <!-- Image Template -->
+                                                    <!-- indent-description is an optional Parameter for Large Images. The Description will be restricted to 10 Columns and centered under the Image -->
+                                                    <!-- Important: Fallback Image inside srcset-Attribut needs to have the same aspect ratio as the Images in src and data-srcset -->
+                                                    <div class="module-image ">
+                                                        <img class="lazyload"
+                                                            src="https://intpic01.internom.net/custom/persons/02/120x120/"
+                                                            alt="Image Alt" srcset="images/lazy-fallback.png"
+                                                            data-sizes="auto"
+                                                            data-srcset="https://intpic01.internom.net/custom/persons/02/120x120/ 120w, https://intpic01.internom.net/custom/persons/02/160x160/ 160w ,https://intpic01.internom.net/custom/persons/02/240x240/ 240w " />
+                                                    </div>
+                                                </div>
+                                                <!-- This one is for mobile and desktop. -->
+                                                <div class="content-data d-flex d-md-none d-lg-flex">
+                                                    <span class="content-data-item" itemprop="givenName"> <strong>
+                                                            Maximilian </strong> </span>
+                                                    <span class="content-data-item" itemprop="familyName"> <strong>
+                                                            Müller-Markgraf Schneider </strong> </span>
+                                                    <span class="content-data-item" itemprop="jobTitle"> Product Manager
+                                                    </span>
+                                                    <span class="content-data-item" itemprop="brand"> Industrial
+                                                        Hydraulics </span>
+                                                </div>
+                                                <!-- This one is for tablet only. -->
+                                                <div class="content-data d-none d-md-flex d-lg-none">
+                                                    <span class="content-data-item"> <strong> Maximilian Müller-Markgraf
+                                                            Schneider </strong> </span>
+                                                    <span class="content-data-item"> Product Manager Industrial
+                                                        Hydraulics </span>
+                                                    <p class="content-data-item contact-phone">
+                                                        <!-- Consider obfuscation to protect the phone number. -->
+                                                        <a href="tel:499352181234567" class="secondary">
+                                                            <i class="icon icon-dc_call"></i> + 49 9352-18 1234 567
+                                                        </a>
+                                                    </p>
+                                                    <p class="content-data-item contact-email">
+                                                        <!-- Consider obfuscation to protect the email address. -->
+                                                        <a href="mailto:maximilian.mueller-markgrafs@bosch.de"
+                                                            class="secondary">
+                                                            <i class="icon icon-dc_mail"></i>
+                                                            maximilian.mueller-markgrafs@bosch.de
+                                                        </a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <p class="contact-phone d-block d-md-none d-lg-block">
+                                                <!-- Consider obfuscation to protect the phone number. -->
+                                                <a href="tel:499352181234567" class="secondary">
+                                                    <i class="icon icon-dc_call"></i> + 49 9352-18 1234 567
+                                                </a>
+                                            </p>
+                                            <p class="contact-email d-block d-md-none d-lg-block">
+                                                <!-- Consider obfuscation to protect the email address. -->
+                                                <a href="mailto:maximilian.mueller-markgrafs@bosch.de"
+                                                    class="secondary">
+                                                    <i class="icon icon-dc_mail"></i>
+                                                    maximilian.mueller-markgrafs@bosch.de
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-navigation-block" id="nav-block-3-1" data-level="3">
+                            <template class="header-navigation-breadcrumbs-template">
+                                <!-- Note that these are no real breadcrumbs (no urls) and hence do not need schema.org markup. -->
+                                <ul class="list list-horizontal">
+                                    <li>
+                                        <a href="#" class="action-header-navigate" data-target-id="nav-block-1"> Menu <i
+                                                class="icon icon-dc_forward_right"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="action-header-navigate" data-target-id="nav-block-2-1">
+                                            Products <i class="icon icon-dc_forward_right"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="action-header-navigate disabled"
+                                            data-target-id="nav-block-3-1"> Industrial Hydraulics <i
+                                                class="icon icon-dc_forward_right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </template>
+                            <div class="header-navigation-title">
+                                <p> <strong> Industrial Hydraulics </strong> </p>
+                                <a href="https://www.google.de/" class="overview secondary">
+                                    <i class="icon icon-dc_overview"></i> overview
+                                </a>
+                            </div>
+                            <div class="header-navigation-content">
+                                <div class="row">
+                                    <div class="col-lg-9">
+                                        <ul class="list list-content"
+                                            itemtype="http://www.schema.org/SiteNavigationElement">
+                                            <li class="content-item" itemprop="name">
+                                                <a href="/" class="secondary action-header-navigate" itemprop="url">
+                                                    Pumps </a>
+                                            </li>
+                                            <li class="content-item" itemprop="name">
+                                                <a href="/" class="secondary action-header-navigate" itemprop="url">
+                                                    Motors </a>
+                                            </li>
+                                            <li class="content-item" itemprop="name">
+                                                <a href="/" class="secondary action-header-navigate" itemprop="url">
+                                                    Cylinder </a>
+                                            </li>
+                                            <li class="content-item" itemprop="name">
+                                                <a href="/" class="secondary action-header-navigate" itemprop="url"> On/
+                                                    Off valves </a>
+                                            </li>
+                                            <li class="content-item" itemprop="name">
+                                                <a href="/" class="secondary action-header-navigate" itemprop="url">
+                                                    Proportional Serve valves </a>
+                                            </li>
+                                            <li class="content-item" itemprop="name">
+                                                <a href="/" class="secondary action-header-navigate" itemprop="url">
+                                                    Accumulators </a>
+                                            </li>
+                                            <li class="content-item" itemprop="name">
+                                                <a href="/" class="secondary action-header-navigate" itemprop="url">
+                                                    Manofolds and plates </a>
+                                            </li>
+                                            <li class="content-item" itemprop="name">
+                                                <a href="/" class="secondary action-header-navigate" itemprop="url">
+                                                    Electronics </a>
+                                            </li>
+                                            <li class="content-item" itemprop="name">
+                                                <a href="/" class="secondary action-header-navigate" itemprop="url">
+                                                    Systems </a>
+                                            </li>
+                                            <li class="content-item" itemprop="name">
+                                                <a href="/" class="secondary action-header-navigate" itemprop="url">
+                                                    Power units </a>
+                                            </li>
+                                            <li class="content-item" itemprop="name">
+                                                <a href="/" class="secondary action-header-navigate" itemprop="url">
+                                                    Sensors and Signal transmitters </a>
+                                            </li>
+                                            <li class="content-item" itemprop="name">
+                                                <a href="/" class="secondary action-header-navigate" itemprop="url">
+                                                    Filters </a>
+                                            </li>
+                                            <li class="content-item" itemprop="name">
+                                                <a href="/" class="secondary action-header-navigate" itemprop="url">
+                                                    Sensors and Signal transmitters </a>
+                                            </li>
+                                            <li class="content-item" itemprop="name">
+                                                <a href="/" class="secondary action-header-navigate" itemprop="url">
+                                                    Filters </a>
+                                            </li>
+                                            <li class="content-item" itemprop="name">
+                                                <a href="/" class="secondary action-header-navigate" itemprop="url">
+                                                    Concealed </a>
+                                            </li>
+                                            <li class="content-item" itemprop="name">
+                                                <a href="/" class="secondary action-header-navigate" itemprop="url">
+                                                    Startling </a>
+                                            </li>
+                                            <li class="content-item" itemprop="name">
+                                                <a href="/" class="secondary action-header-navigate" itemprop="url">
+                                                    Argumentative </a>
+                                            </li>
+                                            <li class="content-item" itemprop="name">
+                                                <a href="/" class="secondary action-header-navigate" itemprop="url">
+                                                    Twitching </a>
+                                            </li>
+                                            <li class="content-item" itemprop="name">
+                                                <a href="/" class="secondary action-header-navigate" itemprop="url">
+                                                    Inconsiderate </a>
+                                            </li>
+                                            <li class="content-item" itemprop="name">
+                                                <a href="/" class="secondary action-header-navigate" itemprop="url">
+                                                    Highly effective/ likely </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <!-- This block is optional. -->
+                                        <div class="contact" itemtype="http://schema.org/Person">
+                                            <!--<meta itemprop="gender" content="http://schema.org/Female">-->
+                                            <meta itemprop="gender" content="http://schema.org/Male">
+                                            <meta itemprop="image"
+                                                content="https://intpic01.internom.net/custom/persons/02/240x240/">
+                                            <!-- Consider that obfuscation/removal will protect this data but render it useless. -->
+                                            <meta itemprop="email" content="klara.bella@bosch.de">
+                                            <meta itemprop="telephone" content="499352181234567">
+                                            <div class="contact-title">
+                                                <p> <strong> Your contact person: </strong> </p>
+                                            </div>
+                                            <div class="contact-content">
+                                                <div class="content-image">
+                                                    <!-- Image Template -->
+                                                    <!-- indent-description is an optional Parameter for Large Images. The Description will be restricted to 10 Columns and centered under the Image -->
+                                                    <!-- Important: Fallback Image inside srcset-Attribut needs to have the same aspect ratio as the Images in src and data-srcset -->
+                                                    <div class="module-image ">
+                                                        <img class="lazyload"
+                                                            src="https://intpic01.internom.net/custom/persons/01/120x120/"
+                                                            alt="Image Alt" srcset="images/lazy-fallback.png"
+                                                            data-sizes="auto"
+                                                            data-srcset="https://intpic01.internom.net/custom/persons/01/120x120/ 120w, https://intpic01.internom.net/custom/persons/01/160x160/ 160w ,https://intpic01.internom.net/custom/persons/01/240x240/ 240w " />
+                                                    </div>
+                                                </div>
+                                                <!-- This one is for mobile and desktop. -->
+                                                <div class="content-data d-flex d-md-none d-lg-flex">
+                                                    <span class="content-data-item" itemprop="givenName"> <strong> Klara
+                                                        </strong> </span>
+                                                    <span class="content-data-item" itemprop="familyName"> <strong>
+                                                            Bella </strong> </span>
+                                                    <span class="content-data-item" itemprop="jobTitle"> Consultant
+                                                    </span>
+                                                    <span class="content-data-item" itemprop="brand"> Industrial
+                                                        Hydraulics </span>
+                                                </div>
+                                                <!-- This one is for tablet only. -->
+                                                <div class="content-data d-none d-md-flex d-lg-none">
+                                                    <span class="content-data-item"> <strong> Klara Bella </strong>
+                                                    </span>
+                                                    <span class="content-data-item"> Consultant Industrial Hydraulics
+                                                    </span>
+                                                    <p class="content-data-item contact-phone">
+                                                        <!-- Consider obfuscation to protect the phone number. -->
+                                                        <a href="tel:499352181234567" class="secondary">
+                                                            <i class="icon icon-dc_call"></i> + 49 9352-18 1234 567
+                                                        </a>
+                                                    </p>
+                                                    <p class="content-data-item contact-email">
+                                                        <!-- Consider obfuscation to protect the email address. -->
+                                                        <a href="mailto:klara.bella@bosch.de" class="secondary">
+                                                            <i class="icon icon-dc_mail"></i> klara.bella@bosch.de
+                                                        </a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <p class="contact-phone d-block d-md-none d-lg-block">
+                                                <!-- Consider obfuscation to protect the phone number. -->
+                                                <a href="tel:499352181234567" class="secondary">
+                                                    <i class="icon icon-dc_call"></i> + 49 9352-18 1234 567
+                                                </a>
+                                            </p>
+                                            <p class="contact-email d-block d-md-none d-lg-block">
+                                                <!-- Consider obfuscation to protect the email address. -->
+                                                <a href="mailto:klara.bella@bosch.de" class="secondary">
+                                                    <i class="icon icon-dc_mail"></i> klara.bella@bosch.de
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
